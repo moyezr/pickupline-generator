@@ -1,6 +1,5 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 import { createClient } from "@/utils/supabase/server";
@@ -11,13 +10,15 @@ export async function login() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`,
+      redirectTo: `${process.env.SITE_URL}/auth/callback`,
     },
-  })
+  });
 
-  //console.log("Data Url", data.url)
-  
+  console.log("SITE_URL", process.env.SITE_URL);
+
+  console.log("Data Url", data.url);
+
   if (data.url) {
-    redirect(data.url) // use the redirect API for your server framework
+    redirect(data.url); // use the redirect API for your server framework
   }
 }
