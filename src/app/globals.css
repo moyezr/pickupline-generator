@@ -6,7 +6,8 @@
   font-style: normal;
 }
 
-body {
+
+html, body {
   overflow-x: hidden;
 }
 
