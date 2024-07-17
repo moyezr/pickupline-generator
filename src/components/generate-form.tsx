@@ -70,7 +70,7 @@ export default function ProfileForm() {
           name="description"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-rose-800 text-xl md:text-3xl font-semibold">
+              <FormLabel className="text-rose-700 text-xl md:text-3xl">
                 Tell us about your crush
               </FormLabel>
               <FormControl>
@@ -78,7 +78,7 @@ export default function ProfileForm() {
                   placeholder={`She is a 10 but..
 He likes football....
                     `}
-                  className="resize-none text-base md:text-lg overflow-hidden h-32 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="resize-none text-rose-500 ring-0 ring-gray-300 focus:ring-rose-500 focus-visible:ring-rose-500 text-base md:text-lg overflow-hidden h-32 disabled:opacity-60 disabled:cursor-not-allowed"
                   {...field}
                 />
               </FormControl>
@@ -93,12 +93,12 @@ He likes football....
           disabled={form.formState.isSubmitting}
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="grand-hotel-regular text-rose-800 font-semibold text-xl md:text-3xl">
+              <FormLabel className="grand-hotel-regular text-rose-700 text-xl md:text-3xl">
                 Style
               </FormLabel>
               <FormControl>
                 <Input
-                  className="text-base md:text-lg disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="text-base ring-0 ring-gray-300 text-rose-500 focus:ring-rose-500 focus-visible:ring-rose-500 md:text-lg disabled:opacity-60 disabled:cursor-not-allowed"
                   placeholder="eg: Funny"
                   {...field}
                 />
